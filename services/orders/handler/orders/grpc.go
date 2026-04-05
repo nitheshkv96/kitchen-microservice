@@ -30,10 +30,10 @@ func NewGrpcOrdersService(grpc *grpc.Server, ordersService types.OrderService) {
 func (h *OrdersGrpcHandler) CreateOrder(ctx context.Context, req *orders.CreateOrderRequest) (*orders.CreateOrderResponse, error) {
 
 	order := &orders.Order{
-		OrderID:    42,
-		ProductID:  12,
-		CustomerID: 1,
-		Quantity:   10,
+		OrderID:    1,
+		ProductID:  req.ProductID,
+		CustomerID: req.CustonerID,
+		Quantity:   req.Quantity,
 	}
 
 	err := h.ordersService.CreateOrder(ctx, order)
