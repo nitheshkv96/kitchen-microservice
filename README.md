@@ -51,8 +51,4 @@ The project follows a **microservice architecture** with multiple layers:
 - Integrate service discovery  
 - Add observability (logging, metrics, tracing)  
 
----
-
-## License
-
-MIT © Nithesh KV  
+--- 
